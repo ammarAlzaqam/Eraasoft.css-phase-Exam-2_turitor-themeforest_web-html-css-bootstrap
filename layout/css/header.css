@@ -1,0 +1,256 @@
+header {
+  background-color: var(--bg);
+  min-height: 85px;
+
+  .left {
+    width: 40%;
+    gap: 1rem;
+    > img {
+      width: clamp(125px, 12vw, 150px);
+    }
+
+    .inputs {
+      .dropdown-btn {
+        position: relative;
+        background-color: #00000033;
+        border: none;
+
+        &:hover {
+          .dropdown-items {
+            transform: translateY(100%) scale(1);
+            opacity: 1;
+            pointer-events: visible;
+          }
+        }
+
+        span {
+          color: white;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 26px;
+          text-transform: uppercase;
+        }
+
+        img {
+          width: 12px;
+          filter: brightness(0) invert(1);
+        }
+
+        .dropdown-items {
+          width: 250px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(105%) scale(0.95);
+          opacity: 0;
+          pointer-events: none;
+          transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+
+          a {
+            display: block;
+            color: var(--primary);
+            padding: 16px;
+            border-bottom: 1px solid #f5f5f5;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: var(--accent);
+            }
+          }
+        }
+      }
+
+      .search-input {
+        width: clamp(150px, 16vw, 253px);
+        color: white;
+        padding-inline: 12px;
+        border: 1px solid var(--border);
+
+        img {
+          width: 14px;
+          filter: brightness(0) invert(1);
+        }
+
+        input {
+          color: white;
+          background-color: transparent;
+          border: none;
+
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 28px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    nav {
+      gap: 38px;
+
+      a {
+        font-family: "Roboto", sans-serif;
+        position: relative;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 95px;
+        text-transform: uppercase;
+        transition: color 0.4s ease;
+
+        &:hover {
+          color: var(--accent);
+
+          &::before {
+            transform: translateX(50%) scale(1);
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 25px;
+          right: 50%;
+          transform: translateX(50%) scale(0);
+          transition: transform 0.4s ease;
+
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: var(--accent);
+        }
+
+        &.active {
+          color: var(--accent);
+
+          &::before {
+            transform: translateX(50%) scale(1);
+          }
+        }
+      }
+    }
+
+    .icons {
+      i {
+        color: white;
+      }
+
+      > div {
+        width: 35px;
+        height: 35px;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease,
+          border 0.3s ease;
+
+        &:hover {
+          background-color: var(--accent);
+          border-color: var(--accent);
+        }
+
+        &.user-icon-wrapper {
+          i {
+            font-size: 14px;
+          }
+        }
+
+        &.cart-icon-wrapper {
+          position: relative;
+
+          &::after {
+            content: "0";
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+
+            background-color: var(--accent);
+            color: white;
+            font-size: 9px;
+            font-weight: 400;
+            line-height: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          i {
+            font-size: 12px;
+          }
+        }
+      }
+
+      > img {
+        width: 22px;
+        cursor: pointer;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    .dropdown-menu-icon {
+      position: relative;
+      background-color: var(--accent);
+      padding: 6px 14px;
+
+      &:hover {
+        .dropdown-items {
+          transform: translateY(100%) scale(1);
+          opacity: 1;
+          pointer-events: visible;
+
+          .links-wrapper {
+            transform: translateY(0);
+          }
+        }
+      }
+
+      img {
+        filter: brightness(0) invert(1);
+        width: 25px;
+      }
+
+      .dropdown-items {
+        overflow: hidden;
+        width: 250px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%) scale(0.95);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+
+        .links-wrapper {
+          transition: transform 0.3s ease;
+
+          transform: translateY(-100%);
+
+          a {
+            display: block;
+            color: var(--primary);
+            padding: 16px;
+            border-bottom: 1px solid #f5f5f5;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: var(--accent);
+            }
+          }
+        }
+      }
+    }
+  }
+}

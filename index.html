@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turitor</title>
+    <link rel="shortcut icon" href="./fav_icon.png" type="image/png">
+
+    <!--? Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!--? Animate.css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--? Font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--? Css files -->
+    <link rel="stylesheet" href="./layout/css/index.css">
+    <link rel="stylesheet" href="./css/homePage.css">
+</head>
+
+<body>
+    <!--TODO>> Header -->
+    <header class="container-fluid d-flex align-items-center gap-5">
+        <!--//* Left side -->
+        <div class="left d-flex align-items-center justify-content-between">
+            <!--//! Logo -->
+            <img src="./layout/images/header/logo.png">
+            <!--//! Inputs -->
+            <div class="inputs d-none d-lg-flex gap-3">
+                <!--! Dropdown Category btn -->
+                <button class="dropdown-btn d-flex align-items-center gap-2 px-4 py-2">
+                    <img src="./layout/images/header/dots.png">
+                    <span>Categories</span>
+                    <div class="dropdown-items bg-white rounded-2 shadow text-start">
+                        <a>Art & Design</a>
+                        <a>Architecture</a>
+                        <a>Business Study</a>
+                        <a>Computer Science</a>
+                        <a>Web Development</a>
+                        <a>Data Science</a>
+                        <a>Engineering</a>
+                    </div>
+                </button>
+                <!--! Search Input -->
+                <div class="search-input d-flex align-items-center gap-2">
+                    <img src="./layout/images/header/search-icon.png" alt="search-icon">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+        <!--//* Right side -->
+        <div class="right flex-grow-1 d-flex align-items-center justify-content-end justify-content-xl-between">
+            <nav class="d-none d-md-flex">
+                <a class="active" href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Course</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="icons d-none d-xl-flex align-items-center gap-3">
+                <div class="user-icon-wrapper d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="cart-icon-wrapper d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <img src="./layout/images/header/menu-icon.png">
+            </div>
+            <!--! Menu Icon small screen-->
+            <div class="dropdown-menu-icon rounded d-block d-md-none">
+                <img src="./layout/images/header/menu-icon.png">
+                <div class="dropdown-items">
+                    <div class="links-wrapper bg-white rounded-2 shadow text-start">
+                        <a>Home</a>
+                        <a>About</a>
+                        <a>Course</a>
+                        <a>Blog</a>
+                        <a>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--? WOW.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

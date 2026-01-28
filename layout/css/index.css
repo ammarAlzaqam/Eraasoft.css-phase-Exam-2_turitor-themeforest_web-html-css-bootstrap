@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import url("./header.css");
+
+:root {
+  --primary: #333333;
+  --secondary: #555555;
+  --accent: #0eb582;
+  --bg: #273c66;
+  --border: #4e5c77;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+}
+
+p,
+span,
+a,
+i {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1132px;
+  }
+}
+
+.btn {
+  background-color: var(--accent);
+  padding: 17px 30px 14px;
+  border: 2px solid var(--accent);
+  border-radius: 36px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  &:hover {
+    color: var(--accent);
+    background-color: transparent;
+    border-color: var(--accent);
+  }
+}
+
+.head-text {
+  font-size: clamp(36px, 7vw, 64px);
+  font-weight: 700;
+  line-height: clamp(46.8px, 7vw, 68px);
+  letter-spacing: -0.64px;
+}
+
+.head-title {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: clamp(36px, 3vw, 42px);
+    font-weight: 700;
+    line-height: clamp(39px, 3vw, 42px);
+    letter-spacing: -0.42px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+      align-items: center;
+      text-align: center;
+    }
+
+    span {
+      color: #777777;
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    &.sub {
+      font-size: 36px;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    background-color: #d4d8e0;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  p {
+    max-width: 373px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+
+  &.b {
+    font-weight: 900;
+  }
+
+  &.sub {
+    font-size: 22px;
+    line-height: 26.4px;
+  }
+}
+
+.des {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 26px;
+}
