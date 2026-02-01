@@ -1,0 +1,285 @@
+@keyframes left-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#hero-sec {
+  position: relative;
+  height: 880px;
+  padding-top: 130px;
+  background:
+    url(../images/hero-sec/bg.png) center bottom/cover,
+    #f7f9fb;
+
+  @media (max-width: 575px) {
+    height: 1050px;
+  }
+
+  .container {
+    .content {
+      p {
+        color: var(--secondary);
+        max-width: 710px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.18px;
+      }
+
+      .buttons-group {
+        gap: 2rem;
+
+        @media (max-width: 767px) {
+          gap: 1rem;
+        }
+
+        button.btn:first-child {
+          border: none;
+          transition:
+            color 0.3s ease,
+            background-color 0.3s ease;
+
+          &:hover {
+            background-color: var(--bg);
+            color: white;
+          }
+
+          @media (max-width: 767px) {
+            padding: 20px 40px 17px;
+          }
+        }
+
+        > button.btn:nth-of-type(2) {
+          background-color: transparent;
+          color: var(--accent);
+          transition:
+            color 0.3s ease,
+            background-color 0.3s ease;
+
+          &:hover {
+            background-color: var(--accent);
+            color: white;
+          }
+
+          @media (max-width: 767px) {
+            padding: 20px 40px 17px;
+          }
+        }
+      }
+
+      .modal {
+        h3 {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 26px;
+          letter-spacing: -0.24px;
+        }
+
+        form {
+          input {
+            padding: 12px 25px;
+          }
+
+          button.btn {
+            border: none;
+            border-radius: 6px;
+            width: fit-content;
+            background-color: var(--bg);
+            color: white;
+            transition:
+              color 0.3s ease,
+              background-color 0.3s ease;
+
+            &:hover {
+              background-color: var(--accent);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .floating-images {
+    > img {
+      position: absolute;
+    }
+
+    .cloud-1 {
+      left: 20%;
+      top: 50%;
+      animation: left-right 7s infinite;
+    }
+
+    .cloud-2 {
+      left: 50%;
+      top: 55%;
+      animation: left-right 8s infinite;
+    }
+
+    .cloud-right-lg {
+      left: 75%;
+      top: 50%;
+      animation: left-right 5s infinite;
+    }
+
+    .plant {
+      left: 15%;
+      bottom: 0;
+      z-index: 2;
+
+      @media (max-width: 991px) {
+        left: 5%;
+      }
+    }
+
+    .shelf {
+      left: 20%;
+      top: 61%;
+      z-index: 2;
+
+      @media (max-width: 767px) {
+        top: auto;
+        bottom: 25%;
+      }
+    }
+
+    .earth {
+      left: 22%;
+      top: 82%;
+      animation: rotate 20s infinite;
+      z-index: 9;
+
+      @media (max-width: 767px) {
+        left: 5%;
+      }
+
+      @media (max-width: 575px) {
+        top: auto;
+        bottom: 5%;
+        left: 6%;
+      }
+    }
+
+    .stand {
+      left: 21%;
+      bottom: 0;
+      z-index: 9;
+
+      @media (max-width: 767px) {
+        left: 3%;
+      }
+    }
+
+    .girl-1 {
+      left: 30%;
+      bottom: 0;
+      animation: left-right 20s infinite;
+      z-index: 9;
+    }
+
+    .girl-2 {
+      left: 45%;
+      bottom: 0;
+      animation: left-right 25s infinite;
+      z-index: 9;
+    }
+
+    .books {
+      left: 50%;
+      bottom: 0;
+      z-index: 5;
+
+      @media (max-width: 1199px) {
+        left: auto;
+        right: 10%;
+      }
+
+      @media (max-width: 991px) {
+        right: 5%;
+      }
+
+      @media (max-width: 767px) {
+        right: 3%;
+        width: 60%;
+      }
+    }
+
+    .wifi-ballon {
+      left: 65%;
+      top: 55%;
+      z-index: 1;
+      animation: bounce 8s infinite;
+
+      @media (max-width: 767px) {
+        width: 10%;
+        left: auto;
+        right: 25%;
+        top: auto;
+        bottom: 12%;
+      }
+
+      @media (max-width: 575px) {
+        bottom: 10%;
+      }
+    }
+
+    .book-ballon {
+      left: 71%;
+      top: 60%;
+      z-index: 1;
+      animation: bounce 6s infinite;
+
+      @media (max-width: 767px) {
+        width: 10%;
+        left: auto;
+        right: 13%;
+        top: auto;
+        bottom: 10%;
+      }
+
+      @media (max-width: 575px) {
+        bottom: 8%;
+      }
+    }
+
+    .boy {
+      left: 80%;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+}

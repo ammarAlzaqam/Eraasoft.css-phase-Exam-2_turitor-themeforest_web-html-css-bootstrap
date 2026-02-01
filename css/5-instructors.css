@@ -1,0 +1,119 @@
+#instructors {
+  background-color: #f9fbff;
+  padding-block: 100px;
+
+  .container {
+    .swiper-wrapper {
+      padding-top: 60px;
+
+      .swiper-slide {
+        margin-bottom: 4.5rem;
+        border-radius: 15px;
+        overflow: hidden;
+
+        &:hover {
+          .floating-profile {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: visible;
+          }
+        }
+
+        &.active {
+          .floating-profile {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: visible;
+          }
+        }
+
+        img {
+          background-color: #c1f3e6;
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          object-position: top;
+
+          @media (min-width: 576px) and (max-width: 767px) {
+            width: 80%;
+          }
+        }
+
+        .text {
+          h3 {
+            color: var(--primary);
+            line-height: 42px;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: -0.14px;
+            color: var(--secondary);
+          }
+        }
+
+        .floating-profile {
+          border-radius: 15px;
+          overflow: hidden;
+          opacity: 0;
+          transform: translateY(-55px);
+          transition:
+            transform 0.4s ease,
+            opacity 0.4s ease;
+          pointer-events: none;
+
+          img {
+            background-color: #15c08d;
+          }
+
+          .content {
+            position: relative;
+            z-index: 2;
+            background-image: linear-gradient(to top, #273c66 0%, #fff0 100%);
+            padding-block: 40px;
+
+            h3 {
+              color: white;
+              line-height: 43px;
+            }
+
+            p {
+              color: white !important;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 26px;
+              letter-spacing: -0.14px;
+              color: var(--secondary);
+            }
+
+            .media-icons {
+              gap: 20px;
+              padding-top: 10px;
+
+              i {
+                color: white;
+                font-size: 13;
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-pagination-bullet-active {
+        transition: all 0.3s ease;
+        background-color: transparent;
+        border: 2px solid var(--accent);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

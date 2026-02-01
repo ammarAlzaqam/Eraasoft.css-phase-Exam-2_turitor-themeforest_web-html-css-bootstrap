@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--? Swiper.js cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!--? Css files -->
     <link rel="stylesheet" href="./layout/css/index.css">
     <link rel="stylesheet" href="./css/homePage.css">
@@ -26,7 +28,7 @@
 
 <body>
     <!--TODO>> Header -->
-    <header class="container-fluid d-flex align-items-center gap-5">
+    <header class="container-fluid d-flex align-items-center">
         <!--//* Left side -->
         <div class="left d-flex align-items-center justify-content-between">
             <!--//! Logo -->
@@ -34,9 +36,9 @@
             <!--//! Inputs -->
             <div class="inputs d-none d-lg-flex gap-3">
                 <!--! Dropdown Category btn -->
-                <button class="dropdown-btn d-flex align-items-center gap-2 px-4 py-2">
+                <button class="dropdown-btn d-flex align-items-center gap-2 px-3 px-xl-4 py-3 py-xl-2">
                     <img src="./layout/images/header/dots.png">
-                    <span>Categories</span>
+                    <span class="d-none d-xl-flex">Categories</span>
                     <div class="dropdown-items bg-white rounded-2 shadow text-start">
                         <a>Art & Design</a>
                         <a>Architecture</a>
@@ -55,16 +57,18 @@
             </div>
         </div>
         <!--//* Right side -->
-        <div class="right flex-grow-1 d-flex align-items-center justify-content-end justify-content-xl-between">
-            <nav class="d-none d-md-flex">
+        <div class="right flex-grow-1 d-flex align-items-center justify-content-end justify-content-xxl-between gap-4">
+            <nav class="d-none d-lg-flex">
                 <a class="active" href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Course</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="./pages/about/index.html">About</a>
+                <a href="./pages/course/index.html">Course</a>
+                <a href="./pages/pricing/index.html">Pricing</a>
+                <a href="./pages/instructors/index.html">Instructors</a>
+                <a href="./pages/blog/index.html">Blog</a>
+                <a href="./pages/contact/index.html">Contact</a>
             </nav>
 
-            <div class="icons d-none d-xl-flex align-items-center gap-3">
+            <div class="icons d-none d-xxl-flex align-items-center gap-3">
                 <div class="user-icon-wrapper d-flex align-items-center justify-content-center">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -74,20 +78,829 @@
                 <img src="./layout/images/header/menu-icon.png">
             </div>
             <!--! Menu Icon small screen-->
-            <div class="dropdown-menu-icon rounded d-block d-md-none">
+            <div class="dropdown-menu-icon rounded d-block d-lg-none">
                 <img src="./layout/images/header/menu-icon.png">
                 <div class="dropdown-items">
                     <div class="links-wrapper bg-white rounded-2 shadow text-start">
-                        <a>Home</a>
-                        <a>About</a>
-                        <a>Course</a>
-                        <a>Blog</a>
-                        <a>Contact</a>
+                        <a class="active" href="#">Home</a>
+                        <a href="./pages/about/index.html">About</a>
+                        <a href="./pages/course/index.html">Course</a>
+                        <a href="./pages/pricing/index.html">Pricing</a>
+                        <a href="./pages/blog/index.html">Blog</a>
+                        <a href="./pages/contact/index.html">Contact</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="main">
+        <!--TODO>> 1-Hero Section -->
+        <section id="hero-sec">
+            <div class="container">
+                <div class="content d-flex flex-column align-items-center gap-4 text-center">
+                    <h1 class="head-text">We Take Learning to New Heights</h1>
+                    <p>
+                        We believe everyone has the capacity to be creative. Turitor is a place where people develop
+                        their
+                        own potential.
+                    </p>
+                    <div class="buttons-group d-flex flex-column flex-md-row ">
+                        <!--! Button trigger modal -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-plus"></i> Get a quote
+                        </button>
+                        <!--! Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body p-5 text-start">
+                                        <h3>Sent Us a Message</h3>
+                                        <form class="mt-4 d-flex flex-column gap-4">
+                                            <input class="form-control" type="text" placeholder="Name">
+                                            <input class="form-control" type="email" placeholder="Email">
+                                            <input class="form-control" type="text" placeholder="Phone">
+                                            <button class="btn"><i class="fa-solid fa-paper-plane"></i>Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--! Simple Button -->
+                        <button class="btn"><i class="fa-solid fa-user-plus"></i> Start trial</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-images">
+                <!--! Cloud images -->
+                <img class="cloud-1" src="./images/hero-sec/cloud-l1.png" alt="cloud-img">
+                <img class="cloud-2" src="./images/hero-sec/cloud-l2.png" alt="cloud-img">
+                <img class="cloud-right-lg" src="./images/hero-sec/cloud-lg-right.png" alt="cloud-img">
+                <!--! Left Images -->
+                <img class="plant d-none d-md-block animate__animated animate__fadeIn" src="./images/hero-sec/l1.png"
+                    alt="floating image">
+                <img class="shelf animate__animated animate__fadeIn" src="./images/hero-sec/l2.png"
+                    alt="floating image">
+                <img class="earth" src="./images/hero-sec/l3.png" alt="floating image">
+                <img class="stand animate__animated animate__fadeIn" src="./images/hero-sec/l4.png"
+                    alt="floating image">
+                <img class="girl-1 d-none d-lg-flex" src="./images/hero-sec/l5.png" alt="floating image">
+                <!--! right Images -->
+                <img class="girl-2 d-none d-lg-flex" src="./images/hero-sec/r1.png" alt="floating image">
+                <img class="books animate__animated animate__fadeIn" src="./images/hero-sec/r2.png"
+                    alt="floating image">
+                <img class="wifi-ballon" src="./images/hero-sec/r3.png" alt="floating image">
+                <img class="book-ballon" src="./images/hero-sec/r4.png" alt="floating image">
+                <img class="boy d-none d-xl-block animate__animated animate__fadeIn" src="./images/hero-sec/r5.png"
+                    alt="floating image">
+
+            </div>
+        </section>
+
+        <!--TODO>> 2-Popular Section -->
+        <section id="popular">
+            <div class="container">
+                <div class="head-title-wrapper">
+                    <div class="head-title">
+                        <h2 class="sub">
+                            <span>#Top categories</span>
+                            Popular Subjects
+                        </h2>
+                        <div class="divider"></div>
+                        <p class="des">
+                            Online learning offers a new way to explore subjects you’re passionate about.
+                        </p>
+                    </div>
+                    <button class="btn">
+                        <img src="./images/eye-icon.png" alt="eye-icon">
+                        view all
+                    </button>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon1.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Computer Science</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon2.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Web Development</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon3.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Data Science</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon4.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Engineering</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon5.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Architecture</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon6.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Art & Design</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon7.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Business Study</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box d-flex flex-column align-items-center gap-4">
+                            <img src="./images/popular/subject_icon5.png" alt="icon">
+                            <div class="text d-flex flex-column align-items-center gap-3 text-center">
+                                <a href="./pages/course/index.html">
+                                    <h3 class="card-title sub">Psychology</h3>
+                                </a>
+                                <p class="des">1 Course</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> 3-Courses Section -->
+        <section id="courses">
+            <div class="container">
+                <!--! Text -->
+                <div class="head-title-wrapper">
+                    <div class="head-title">
+                        <h2>
+                            <span>#Top Courses</span>
+                            Featured Courses
+                        </h2>
+                        <div class="divider"></div>
+                        <p class="des">
+                            Online learning offers a new way to explore subjects you’re passionate about.
+                        </p>
+                    </div>
+                    <button class="btn">
+                        <img src="./images/eye-icon.png" alt="eye-icon">
+                        View all
+                    </button>
+                </div>
+                <!--! Tabs -->
+                <div class="tab-course-category">
+                    <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-center">
+                        <li class="active"><a href="#">All</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Computer Science</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Web Development</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Data Science</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Engineering</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Architecture</a></li>
+                    </ul>
+                </div>
+                <!--! Cards -->
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="box d-flex flex-column justify-content-between">
+                            <div class="text d-flex flex-column">
+                                <a class="px-3" href="./pages/course/index.html">Web Development</a>
+                                <a href="./pages/course/course-details/index.html">
+                                    <h3 class="card-title">Making Music with Other People</h3>
+                                </a>
+                                <!--! Hover effect part -->
+                                <div class="course-data d-flex flex-column">
+                                    <div class="top d-flex align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>50</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom d-flex align-items-center">
+                                        <img src="./images/courses/logo.jpg" alt="logo-img">
+                                        <a href="./pages/instructor">turitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/courses/course_image1.png" alt="course_image">
+                            <!--! Foot Hover effect part -->
+                            <div class="foot d-flex justify-content-between align-items-center gap-3">
+                                <div class="rate d-flex align-items-center gap-2">
+                                    <div class="stars d-flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span>1 votes</span>
+                                </div>
+                                <div class="price rounded-circle d-flex align-items-center justify-content-center">
+                                    <span>$1.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="box d-flex flex-column justify-content-between">
+                            <div class="text d-flex flex-column">
+                                <a class="px-3" href="./pages/course/index.html">Engineering</a>
+                                <a href="./pages/course/course-details/index.html">
+                                    <h3 class="card-title">Antiquities Trafficking and Art Crime</h3>
+                                </a>
+                                <!--! Hover effect part -->
+                                <div class="course-data d-flex flex-column">
+                                    <div class="top d-flex align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>51</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom d-flex align-items-center">
+                                        <img src="./images/courses/logo.jpg" alt="logo-img">
+                                        <a href="./pages/instructor">turitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/courses/course_image2.png" alt="course_image">
+                            <!--! Foot Hover effect part -->
+                            <div class="foot d-flex justify-content-between align-items-center gap-3">
+                                <div class="rate d-flex align-items-center gap-2">
+                                    <div class="stars d-flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span>1 votes</span>
+                                </div>
+                                <div class="price rounded-circle d-flex align-items-center justify-content-center">
+                                    <span>$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="box d-flex flex-column justify-content-between">
+                            <div class="text d-flex flex-column">
+                                <a class="px-3" href="./pages/course/index.html">Computer Science</a>
+                                <a href="./pages/course/course-details/index.html">
+                                    <h3 class="card-title">Using Creative Problem Solving</h3>
+                                </a>
+                                <!--! Hover effect part -->
+                                <div class="course-data d-flex flex-column">
+                                    <div class="top d-flex align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>20</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom d-flex align-items-center">
+                                        <img src="./images/courses/logo.jpg" alt="logo-img">
+                                        <a href="./pages/instructor">turitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/courses/course_image3.png" alt="course_image">
+                            <!--! Foot Hover effect part -->
+                            <div class="foot d-flex justify-content-between align-items-center gap-3">
+                                <div class="rate d-flex align-items-center gap-2">
+                                    <div class="stars d-flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span>1 votes</span>
+                                </div>
+                                <div class="price rounded-circle d-flex align-items-center justify-content-center">
+                                    <span>$5.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="box d-flex flex-column justify-content-between">
+                            <div class="text d-flex flex-column">
+                                <a class="px-3" href="./pages/course/index.html">Data Science</a>
+                                <a href="./pages/course/course-details/index.html">
+                                    <h3 class="card-title">Inside Opera: Why Does It Matter?</h3>
+                                </a>
+                                <!--! Hover effect part -->
+                                <div class="course-data d-flex flex-column">
+                                    <div class="top d-flex align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>30</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom d-flex align-items-center">
+                                        <img src="./images/courses/logo.jpg" alt="logo-img">
+                                        <a href="./pages/instructor">turitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/courses/course_image4.png" alt="course_image">
+                            <!--! Foot Hover effect part -->
+                            <div class="foot d-flex justify-content-between align-items-center gap-3">
+                                <div class="rate d-flex align-items-center gap-2">
+                                    <div class="stars d-flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span>1 votes</span>
+                                </div>
+                                <div class="price rounded-circle d-flex align-items-center justify-content-center">
+                                    <span>$3.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="box d-flex flex-column justify-content-between">
+                            <div class="text d-flex flex-column">
+                                <a class="px-3" href="./pages/course/index.html">Architecture</a>
+                                <a href="./pages/course/course-details/index.html">
+                                    <h3 class="card-title">The Power of Podcast for Storytelling</h3>
+                                </a>
+                                <!--! Hover effect part -->
+                                <div class="course-data d-flex flex-column">
+                                    <div class="top d-flex align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom d-flex align-items-center">
+                                        <img src="./images/courses/logo.jpg" alt="logo-img">
+                                        <a href="./pages/instructor">turitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/courses/course_image5.png" alt="course_image">
+                            <!--! Foot Hover effect part -->
+                            <div class="foot d-flex justify-content-between align-items-center gap-3">
+                                <div class="rate d-flex align-items-center gap-2">
+                                    <div class="stars d-flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span>1 votes</span>
+                                </div>
+                                <div class="price rounded-circle d-flex align-items-center justify-content-center">
+                                    <span>$5.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="box d-flex flex-column justify-content-between">
+                            <div class="text d-flex flex-column">
+                                <a class="px-3" href="./pages/course/index.html">Business Study</a>
+                                <a href="./pages/course/course-details/index.html">
+                                    <h3 class="card-title">Fashion and Luxury Fashion in a Changing</h3>
+                                </a>
+                                <!--! Hover effect part -->
+                                <div class="course-data d-flex flex-column">
+                                    <div class="top d-flex align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom d-flex align-items-center">
+                                        <img src="./images/courses/logo.jpg" alt="logo-img">
+                                        <a href="./pages/instructor">turitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/courses/course_image6.png" alt="course_image">
+                            <!--! Foot Hover effect part -->
+                            <div class="foot d-flex justify-content-between align-items-center gap-3">
+                                <div class="rate d-flex align-items-center gap-2">
+                                    <div class="stars d-flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span>1 votes</span>
+                                </div>
+                                <div class="price rounded-circle d-flex align-items-center justify-content-center">
+                                    <span>$5.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> 4-Testimonial Section -->
+        <section id="testimonial">
+            <div class="container">
+                <div class="head-title">
+                    <h2>
+                        <span>#Testimonial</span>
+                        What Students Says
+                    </h2>
+                    <div class="divider"></div>
+                    <p class="des">
+                        Discover how to anticipate and adapt to the latest trends and digital
+                    </p>
+                </div>
+
+                <!-- Swiper -->
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <!--! Slide 1 -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <div class="head-quote d-flex align-items-start gap-3">
+                                <img src="https://img.icons8.com/?size=100&id=Of9evPu4vb6T&format=png&color=c1f3e6"
+                                    alt="">
+                                <p>
+                                    Differe Using skills and
+                                    behaviors People program
+                                    ... ,enabled me to be a fuller me
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="profile-info d-flex justify-content-between align-items-center">
+                                <div class="text">
+                                    <h4>Blaise Matuidi</h4>
+                                    <p>Research Student</p>
+                                </div>
+                                <img class="rounded-circle" src="./images/testimonial/author1.png" alt="profile-img">
+                            </div>
+                        </div>
+                        <!--! Slide 2 -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <div class="head-quote d-flex align-items-start gap-3">
+                                <img src="https://img.icons8.com/?size=100&id=Of9evPu4vb6T&format=png&color=c1f3e6"
+                                    alt="">
+                                <p>
+                                    Using differe skills and
+                                    behaviors People program
+                                    ... ,enabled me to be a fuller me
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="profile-info d-flex justify-content-between align-items-center">
+                                <div class="text">
+                                    <h4>Mario Mandžukić</h4>
+                                    <p>Postgraduate Student</p>
+                                </div>
+                                <img class="rounded-circle" src="./images/testimonial/author2.png" alt="profile-img">
+                            </div>
+                        </div>
+                        <!--! Slide 3 -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <div class="head-quote d-flex align-items-start gap-3">
+                                <img src="https://img.icons8.com/?size=100&id=Of9evPu4vb6T&format=png&color=c1f3e6"
+                                    alt="">
+                                <p>
+                                    People program enabled me to
+                                    be a fuller me, using differe
+                                    ... skills and behaviors
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="profile-info d-flex justify-content-between align-items-center">
+                                <div class="text">
+
+
+                                    <h4>Lucas Vázquez</h4>
+                                    <p>EMBA Student</p>
+                                </div>
+                                <img class="rounded-circle" src="./images/testimonial/author2.png" alt="profile-img">
+                            </div>
+                        </div>
+                        <!--! Slide 4 (1.2) -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <div class="head-quote d-flex align-items-start gap-3">
+                                <img src="https://img.icons8.com/?size=100&id=Of9evPu4vb6T&format=png&color=c1f3e6"
+                                    alt="">
+                                <p>
+                                    Differe Using skills and
+                                    behaviors People program
+                                    ... ,enabled me to be a fuller me
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="profile-info d-flex justify-content-between align-items-center">
+                                <div class="text">
+                                    <h4>Blaise Matuidi</h4>
+                                    <p>Research Student</p>
+                                </div>
+                                <img class="rounded-circle" src="./images/testimonial/author1.png" alt="profile-img">
+                            </div>
+                        </div>
+                        <!--! Slide 5 (2.2) -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <div class="head-quote d-flex align-items-start gap-3">
+                                <img src="https://img.icons8.com/?size=100&id=Of9evPu4vb6T&format=png&color=c1f3e6"
+                                    alt="">
+                                <p>
+                                    Using differe skills and
+                                    behaviors People program
+                                    ... ,enabled me to be a fuller me
+                                </p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="profile-info d-flex justify-content-between align-items-center">
+                                <div class="text">
+                                    <h4>Mario Mandžukić</h4>
+                                    <p>Postgraduate Student</p>
+                                </div>
+                                <img class="rounded-circle" src="./images/testimonial/author2.png" alt="profile-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination pagination-one"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> 5-Instructors Section -->
+        <section id="instructors">
+            <div class="container">
+                <div class="head-title">
+                    <h2>
+                        <span>#Instructors</span>
+                        Featured Instructors
+                    </h2>
+                    <div class="divider"></div>
+                    <p class="des">
+                        Discover how to anticipate and adapt to the latest trends and digital
+                    </p>
+                </div>
+
+                <!-- Swiper -->
+                <div class="swiper instructors-swiper">
+                    <div class="swiper-wrapper">
+                        <!--! Slide 1 -->
+                        <div class="swiper-slide position-relative d-flex flex-column align-items-center gap-4">
+                            <img class="rounded-circle" src="./images/instructors/1.png" alt="instructor-img">
+                            <div class="text d-flex flex-column align-items-center text-center pb-3">
+                                <h3 class="card-title">VíctorValdés</h3>
+                                <p>Professor</p>
+                            </div>
+
+                            <div class="floating-profile position-absolute top-0 w-100 h-100">
+                                <img class="position-absolute top-0 w-100 h-100 z-1" src="./images/instructors/1.png"
+                                    alt="instructor-image">
+                                <div
+                                    class="content w-100 h-100 d-flex flex-column justify-content-end align-items-center text-center px-3">
+                                    <a href="./pages/instructor-profile/index.html">
+                                        <h3 class="card-title">VíctorValdés</h3>
+                                    </a>
+                                    <p>Professor</p>
+                                    <div class="media-icons d-flex">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--! Slide 2 -->
+                        <div class="swiper-slide position-relative d-flex flex-column align-items-center gap-4">
+                            <img class="rounded-circle" src="./images/instructors/2.png" alt="instructor-img">
+                            <div class="text d-flex flex-column align-items-center text-center pb-3">
+                                <h3 class="card-title">EricAbidal</h3>
+                                <p>Professor</p>
+                            </div>
+
+                            <div class="floating-profile position-absolute top-0 w-100 h-100">
+                                <img class="position-absolute top-0 w-100 h-100 z-1" src="./images/instructors/2.png"
+                                    alt="instructor-image">
+                                <div
+                                    class="content w-100 h-100 d-flex flex-column justify-content-end align-items-center text-center px-3">
+                                    <a href="./pages/instructor-profile/index.html">
+                                        <h3 class="card-title">EricAbidal</h3>
+                                    </a>
+                                    <p>Professor</p>
+                                    <div class="media-icons d-flex">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--! Slide 3 -->
+                        <div class="swiper-slide active position-relative d-flex flex-column align-items-center gap-4">
+                            <img class="rounded-circle" src="./images/instructors/3.png" alt="instructor-img">
+                            <div class="text d-flex flex-column align-items-center text-center pb-3">
+                                <h3 class="card-title">CarolinaMartin</h3>
+                                <p>Professor</p>
+                            </div>
+
+                            <div class="floating-profile position-absolute top-0 w-100 h-100">
+                                <img class="position-absolute top-0 w-100 h-100 z-1" src="./images/instructors/3.png"
+                                    alt="instructor-image">
+                                <div
+                                    class="content w-100 h-100 d-flex flex-column justify-content-end align-items-center text-center px-3">
+                                    <a href="./pages/instructor-profile/index.html">
+                                        <h3 class="card-title">CarolinaMartin</h3>
+                                    </a>
+                                    <p>Professor</p>
+                                    <div class="media-icons d-flex">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--! Slide 4 -->
+                        <div class="swiper-slide position-relative d-flex flex-column align-items-center gap-4">
+                            <img class="rounded-circle" src="./images/instructors/4.jpg" alt="instructor-img">
+                            <div class="text d-flex flex-column align-items-center text-center pb-3">
+                                <h3 class="card-title">RuizYolanda</h3>
+                                <p>Professor</p>
+                            </div>
+
+                            <div class="floating-profile position-absolute top-0 w-100 h-100">
+                                <img class="position-absolute top-0 w-100 h-100 z-1" src="./images/instructors/4.jpg"
+                                    alt="instructor-image">
+                                <div
+                                    class="content w-100 h-100 d-flex flex-column justify-content-end align-items-center text-center px-3">
+                                    <a href="./pages/instructor-profile/index.html">
+                                        <h3 class="card-title">RuizYolanda</h3>
+                                    </a>
+                                    <p>Professor</p>
+                                    <div class="media-icons d-flex">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--! Slide 5 (2.2) -->
+                        <div class="swiper-slide position-relative d-flex flex-column align-items-center gap-4">
+                            <img class="rounded-circle" src="./images/instructors/2.png" alt="instructor-img">
+                            <div class="text d-flex flex-column align-items-center text-center pb-3">
+                                <h3 class="card-title">EricAbidal</h3>
+                                <p>Professor</p>
+                            </div>
+
+                            <div class="floating-profile position-absolute top-0 w-100 h-100">
+                                <img class="position-absolute top-0 w-100 h-100 z-1" src="./images/instructors/2.png"
+                                    alt="instructor-image">
+                                <div
+                                    class="content w-100 h-100 d-flex flex-column justify-content-end align-items-center text-center px-3">
+                                    <a href="./pages/instructor-profile/index.html">
+                                        <h3 class="card-title">EricAbidal</h3>
+                                    </a>
+                                    <p>Professor</p>
+                                    <div class="media-icons d-flex">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination pagination-two"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
 
     <!--? WOW.js cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
@@ -96,6 +909,78 @@
         </script>
     <script>
         new WOW().init();
+    </script>
+
+    <!--? Swiper JS cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiperOne = new Swiper(".testimonial-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            breakpoints: {
+                // موبايل
+                0: {
+                    slidesPerView: 1,
+                },
+                // تابلت
+                768: {
+                    slidesPerView: 2,
+                    centeredSlides: true,
+                },
+                // لابتوب وما فوق
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+
+            pagination: {
+                el: ".pagination-one",
+                clickable: true,
+            },
+        });
+
+        var swiperTow = new Swiper(".instructors-swiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+
+            breakpoints: {
+                // موبايل
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                // تابلت
+                992: {
+                    slidesPerView: 3,
+                },
+                // لابتوب وما فوق
+                1200: {
+                    slidesPerView: 4,
+                },
+            },
+
+            pagination: {
+                el: ".pagination-two",
+                clickable: true,
+            },
+        });
     </script>
 </body>
 

@@ -1,0 +1,85 @@
+#popular {
+  padding-block: 100px 85px;
+  .head-title-wrapper {
+    padding-bottom: 40px;
+  }
+
+  .row {
+    > div {
+      padding: 15px;
+    }
+  }
+
+  .box {
+    position: relative;
+    background-color: white;
+    padding-block: 40px 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    transition:
+      border 0.4s ease,
+      box-shadow 0.4s ease;
+
+    img {
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow);
+
+      img {
+        transform: scale(0.9);
+      }
+
+      &::before {
+        transform: scale(1);
+      }
+
+      &::after {
+        transform: scale(1);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -1rem;
+      left: -1rem;
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent);
+      border-radius: 6px;
+      transform: scale(0);
+      transition: transform 0.4s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: -1rem;
+      right: -1rem;
+      width: 60px;
+      height: 60px;
+      background: url(../images/popular/dot_shape.svg) right bottom/contain
+        no-repeat;
+      border-radius: 6px;
+      transform: scale(0);
+      transition: transform 0.4s ease;
+    }
+
+    a {
+      h3 {
+        transition: color 0.4s ease;
+      }
+
+      &:hover {
+        h3 {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}
