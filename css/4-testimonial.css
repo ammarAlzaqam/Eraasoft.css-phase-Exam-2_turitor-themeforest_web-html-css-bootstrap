@@ -3,7 +3,6 @@
 
   .container {
     .swiper-wrapper {
-      transition-timing-function: linear !important;
       padding-top: 60px;
 
       .swiper-slide {
@@ -83,20 +82,22 @@
           }
         }
       }
+    }
 
-      .swiper-pagination {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    .swiper-pagination {
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .swiper-pagination-bullet-active {
-        transition: all 0.3s ease;
-        background-color: transparent;
-        border: 2px solid var(--accent);
-        width: 15px;
-        height: 15px;
-      }
+    .swiper-pagination-bullet-active {
+      transition: all 0.3s ease;
+      background-color: transparent;
+      border: 2px solid var(--accent);
+      width: 15px;
+      height: 15px;
     }
   }
 }

@@ -1,0 +1,27 @@
+#partners {
+  .container {
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+      padding-block: 50px;
+
+      .swiper-slide {
+        .logo-img-wrapper {
+          width: 224px;
+          height: 100px;
+
+          &:hover {
+            img {
+              filter: grayscale(0%);
+            }
+          }
+
+          img {
+            height: 100%;
+            filter: grayscale(100%);
+            transition: filter 0.4s ease;
+          }
+        }
+      }
+    }
+  }
+}
