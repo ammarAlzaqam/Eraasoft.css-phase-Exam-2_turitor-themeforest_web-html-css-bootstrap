@@ -1,0 +1,97 @@
+#join {
+  position: relative;
+  margin-bottom: -137px;
+
+  .container {
+    .content {
+      gap: 20px;
+      background:
+        url(../images/join-bg.png) center/cover,
+        var(--accent);
+
+      border-radius: 15px;
+      padding: 65px;
+
+      @media (max-width: 767px) {
+        padding-inline: 30px;
+      }
+
+      p {
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 17px;
+      }
+
+      .subscribe-box {
+        gap: 24px;
+
+        @media (max-width: 991px) {
+          gap: 65px;
+        }
+
+        h2 {
+          color: white;
+          font-size: 42px;
+          font-weight: 700;
+          line-height: 50px;
+          letter-spacing: -0.42px;
+
+          @media (max-width: 575px) {
+            font-size: 32px;
+            line-height: 38px;
+          }
+        }
+
+        .send-message-input-wrapper {
+          gap: 8px;
+          background-color: white;
+          border-radius: 36px;
+          padding: 10px;
+          padding-left: 30px;
+
+          @media (max-width: 575px) {
+            gap: 20px;
+            background-color: transparent;
+            padding: 0;
+          }
+
+          input {
+            border: none;
+
+            color: black;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+
+            &:focus {
+              outline: none;
+            }
+
+            @media (max-width: 575px) {
+              width: 100%;
+              background-color: white;
+              border-radius: 36px;
+              padding: 15px 20px;
+            }
+          }
+
+          button.btn {
+            border-color: var(--bg);
+            background-color: var(--bg);
+            transition:
+              background-color 0.4s ease,
+              color 0.4s ease,
+              border 0.4s ease;
+
+            &:hover {
+              border-color: var(--accent);
+              color: white;
+              background-color: var(--accent);
+            }
+          }
+        }
+      }
+    }
+  }
+}
