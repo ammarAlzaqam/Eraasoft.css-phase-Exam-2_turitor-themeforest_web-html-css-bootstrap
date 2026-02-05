@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course details</title>
+    <link rel="shortcut icon" href="../../../icon.png" type="image/png">
+
+    <!--? Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!--? Animate.css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--? Font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--? Css files -->
+    <link rel="stylesheet" href="../../../layout/css/index.css">
+    <link rel="stylesheet" href="./css/courseDetailsPage.css">
+</head>
+
+<body>
+    <!--TODO>> Header -->
+    <header class="container-fluid d-flex align-items-center">
+        <!--//* Left side -->
+        <div class="left d-flex align-items-center justify-content-between">
+            <!--//! Logo -->
+            <img src="../../../layout/images/logo.png">
+            <!--//! Inputs -->
+            <div class="inputs d-none d-lg-flex gap-3">
+                <!--! Dropdown Category btn -->
+                <button class="dropdown-btn d-flex align-items-center gap-2 px-3 px-xl-4 py-3 py-xl-2">
+                    <img src="../../../layout/images/header/dots.png">
+                    <span class="d-none d-xl-flex">Categories</span>
+                    <div class="dropdown-items bg-white rounded-2 shadow text-start">
+                        <a>Art & Design</a>
+                        <a>Architecture</a>
+                        <a>Business Study</a>
+                        <a>Computer Science</a>
+                        <a>Web Development</a>
+                        <a>Data Science</a>
+                        <a>Engineering</a>
+                    </div>
+                </button>
+                <!--! Search Input -->
+                <div class="search-input d-flex align-items-center gap-2">
+                    <img src="../../../layout/images/header/search-icon.png" alt="search-icon">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+        <!--//* Right side -->
+        <div class="right flex-grow-1 d-flex align-items-center justify-content-end justify-content-xxl-between gap-4">
+            <nav class="d-none d-lg-flex">
+                <a href="../../../index.html">Home</a>
+                <a href="../../about/index.html">About</a>
+                <a href="../../course/index.html">Course</a>
+                <a href="../../pricing/index.html">Pricing</a>
+                <a href="../../instructor/index.html">Instructor</a>
+                <a href="../../blog/index.html">Blog</a>
+                <a href="../../contact/index.html">Contact</a>
+            </nav>
+
+            <div class="icons d-none d-xxl-flex align-items-center gap-3">
+                <div class="user-icon-wrapper d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="cart-icon-wrapper d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <img src="../../../layout/images/header/menu-icon.png">
+            </div>
+            <!--! Menu Icon small screen-->
+            <div class="dropdown-menu-icon rounded d-block d-lg-none">
+                <img src="../../../layout/images/header/menu-icon.png">
+                <div class="dropdown-items">
+                    <div class="links-wrapper bg-white rounded-2 shadow text-start">
+                        <a href="../../../index.html">Home</a>
+                        <a href="../../about/index.html">About</a>
+                        <a href="../../course/index.html">Course</a>
+                        <a href="../../pricing/index.html">Pricing</a>
+                        <a href="../../instructor/index.html">Instructor</a>
+                        <a href="../../blog/index.html">Blog</a>
+                        <a href="../../contact/index.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <!--TODO>> 1-Hero Section -->
+        <section id="courseDetails-hero-sec">
+            <div class="container d-flex h-100 flex-column justify-content-center align-items-center gap-3">
+                <h2 class="title sub">Course Details</h2>
+                <div class="d-flex gap-2">
+                    <p><a href="../../../index.html">Home</a></p>
+                    <p>/</p>
+                    <p><a href="../../course/index.html">Courses</a></p>
+                    <p>/</p>
+                    <p>Course Details</p>
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> 2-Course Details -->
+        <section id="course-details">
+            <div class="container d-flex flex-column flex-lg-row">
+                <aside class="flex-shrink-0">
+                    <div class="box top-box mb-5">
+                        <iframe class="embed-responsive-item rounded-4" width="100%"
+                            src="https://www.youtube.com/embed/UhD-EEdMGd0"></iframe>
+
+                        <ul class="list-unstyled">
+                            <li class="item d-flex align-items-center justify-content-between">
+                                <div class="left d-flex align-items-center gap-2">
+                                    <i class="bi bi-clock"></i>
+                                    Duration
+                                </div>
+                                12 weeks
+                            </li>
+                            <li class="item d-flex align-items-center justify-content-between">
+                                <div class="left d-flex align-items-center gap-2">
+                                    <i class="bi bi-book-half"></i>
+                                    Lectures
+                                </div>
+                                10
+                            </li>
+                            <li class="item d-flex align-items-center justify-content-between">
+                                <div class="left d-flex align-items-center gap-2">
+                                    <i class="bi bi-gear-wide-connected"></i>
+                                    Skill level
+                                </div>
+                                All levels
+                            </li>
+                            <li class="item d-flex align-items-center justify-content-between">
+                                <div class="left d-flex align-items-center gap-2">
+                                    <i class="bi bi-list-check"></i>
+                                    Quizzes
+                                </div>
+                                0
+                            </li>
+                            <li class="item d-flex align-items-center justify-content-between">
+                                <div class="left d-flex align-items-center gap-2">
+                                    <i class="bi bi-percent"></i>
+                                    Pass percentages
+                                </div>
+                                80
+                            </li>
+                            <li class="item d-flex align-items-center justify-content-between">
+                                <div class="left d-flex align-items-center gap-2">
+                                    <i class="bi bi-patch-check"></i>
+                                    Certificate
+                                </div>
+                                Yes
+                            </li>
+                        </ul>
+
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="box bottom-box">
+                        <h4>More courses for your</h4>
+                        <ul>
+                            <li class="d-flex gap-3">
+                                <a href="#">
+                                    <img src="./images/courses-list/music.jpg" alt="music-icon">
+                                </a>
+                                <div class="course-data">
+                                    <a href="#">
+                                        <h5>Making Music with Other People</h5>
+                                    </a>
+                                    <p><span>$3.99</span>$1.99</p>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-3">
+                                <a href="#">
+                                    <img src="./images/courses-list/antiquities.jpg" alt="music-icon">
+                                </a>
+                                <div class="course-data">
+                                    <a href="#">
+                                        <h5>Antiquities Trafficking and Art Crime</h5>
+                                    </a>
+                                    <p><span>$30.00</span>$20.00</p>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-3">
+                                <a href="#">
+                                    <img src="./images/courses-list/problem-solving.jpg" alt="music-icon">
+                                </a>
+                                <div class="course-data">
+                                    <a href="#">
+                                        <h5>Using Creative Problem Solving</h5>
+                                    </a>
+                                    <p><span>$9.50</span>$5.50</p>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-3">
+                                <a href="#">
+                                    <img src="./images/courses-list/podcast.jpg" alt="music-icon">
+                                </a>
+                                <div class="course-data">
+                                    <a href="#">
+                                        <h5>The Power of Podcast for Storytelling</h5>
+                                    </a>
+                                    <p><span>$9.50</span>$5.50</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <main>
+                    <div class="top-title">
+                        <div class="head d-flex align-items-center justify-content-between gap-4">
+                            <div class="left d-flex">
+                                <div class="logo d-none d-sm-flex gap-3">
+                                    <img class="rounded-circle" src="./images/logo.jpg" alt="logo-icon">
+                                    <span>turitor</span>
+                                </div>
+                                <h4 class="d-flex flex-column">
+                                    <span>Category:</span>
+                                    Computer Science
+                                </h4>
+                            </div>
+                            <div class="right d-flex justify-content-center align-items-center">$5.50</div>
+                        </div>
+                        <div class="content">
+                            <div class="content-head d-flex flex-wrap row-gap-1">
+                                <div class="rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    1 votes
+                                </div>
+                                <p class="d-flex gap-2">
+                                    <i class="bi bi-people-fill"></i>
+                                    20 enrolled students
+                                </p>
+                                <p class="d-flex gap-2">
+                                    <i class="bi bi-globe"></i>
+                                    eng, arabic
+                                </p>
+                            </div>
+                            <p class="des mb-3">
+                                About this Course HTML and CSS Are the Tools You Need to Build a Website Coding for
+                                beginners might seem hard. However, starting with the basics is a great way to
+                                familiarise yourself with the syntax and the process of what it takes to create a
+                                website. This course teaches you HTML and CSS
+                            </p>
+                            <img class="w-100" src="./images/course-img.jpg" alt="course-img">
+                        </div>
+                    </div>
+
+                    <ul class="list-unstyled tabs d-flex flex-wrap justify-content-center">
+                        <li class="active">Overview</li>
+                        <li>Curriculum</li>
+                        <li>Instructors</li>
+                        <li>Reviews</li>
+                    </ul>
+
+                    <div class="bottom-details d-flex flex-column">
+                        <h3 class="card-title">
+                            About this Course
+                        </h3>
+                        <div class="d-flex flex-column gap-3">
+                            <p class="des">
+                                HTML and CSS Are the Tools You Need to Build a Website Coding for beginners might seem
+                                hard.
+                                However, starting with the basics is a great way to familiarise yourself with the syntax
+                                and
+                                the process of what it takes to create a website.
+                            </p>
+                            <p class="des">
+                                This course teaches you HTML and CSS, two programming languages that are essential to
+                                master
+                                when you are creating your website. This coding for beginners course incorporates three
+                                aspects of learning. You will be able to learn HTML & CSS theory and immediately apply
+                                the
+                                knowledge you’ve learned to practical application. Furthermore, all of the code that you
+                                will write will be visually represented within the course. This allows you to see how
+                                various changes within the code impacts the website developmentLearn a range of
+                                practical
+                                methods. Everything from framing the problem, to doing user research, collaborative
+                                ideation, prototyping and more.
+                            </p>
+                        </div>
+                        <ul class="list-unstyled steps">
+                            <li class="step">
+                                <h4>Get a new mindset</h4>
+                                <p>
+                                    Learn a range of practical methods. Everything from framing the problem, to
+                                    doing user research, collaborative ideation, prototyping and more.
+                                </p>
+                            </li>
+                            <li class="step">
+                                <h4>Show real-time results</h4>
+                                <p>
+                                    Learn a range of practical methods. Everything from framing the problem, to doing
+                                    user research, collaborative ideation, prototyping and more.
+                                </p>
+                            </li>
+                            <li class="step">
+                                <h4>Learn the innovator's toolkit</h4>
+                                <p>
+                                    Learn a range of practical methods. Everything from framing the problem, to doing
+                                    user research, collaborative ideation, prototyping and more.
+                                </p>
+                            </li>
+                        </ul>
+                        <h3 class="card-title">What will you achieve?</h3>
+                        <p class="des">
+                            HTML and CSS Are the Tools You Need to Build a Website Coding for beginners might seem hard.
+                            However, starting with the basics is a great way to familiarise yourself with the syntax and
+                            the process of what it takes to create a website.
+                        </p>
+                        <ul class="list-unstyled steps">
+                            <li class="step">
+                                <p>
+                                    Learn a range of practical methods. Everything from framing the problem, to
+                                    doing user research, collaborative ideation, prototyping and more.
+                                </p>
+                            </li>
+                            <li class="step">
+                                <p>
+                                    Learn a range of practical methods. Everything from framing the problem, to doing
+                                    user research, collaborative ideation, prototyping and more.
+                                </p>
+                            </li>
+                            <li class="step">
+                                <p>
+                                    Learn a range of practical methods. Everything from framing the problem, to doing
+                                    user research, collaborative ideation, prototyping and more.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </section>
+
+        <!--TODO>> 6-Join -->
+        <section id="join">
+            <div class="container">
+                <div
+                    class="content d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                    <p>#Newsletter</p>
+                    <div class="subscribe-box d-flex flex-column align-items-center flex-lg-row">
+                        <h2 class="col-12 col-lg-6">Join our community of students</h2>
+                        <div
+                            class="send-message-input-wrapper col-12 col-lg-6 d-flex flex-column flex-sm-row align-items-center">
+                            <input class="flex-grow-1" type="text" placeholder="Enter your email">
+                            <button class="btn">
+                                <i class="fa-solid fa-envelope"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> Footer -->
+        <footer>
+            <div class="container d-flex flex-column gap-4 gap-md-5">
+                <div class="row g-4">
+                    <div class="box col-12 col-md-6 col-lg-3">
+                        <h4>Company</h4>
+                        <ul class="list-unstyled d-flex flex-column ">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Resource center</a></li>
+                            <li><a href="#">Guides</a></li>
+                        </ul>
+                    </div>
+                    <div class="box col-12 col-md-6 col-lg-3">
+                        <h4>Categories</h4>
+                        <ul class="list-unstyled d-flex flex-column ">
+                            <li><a href="#">All Courses</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Design & Branding</a></li>
+                            <li><a href="#">Storytelling & Voice Over</a></li>
+                        </ul>
+                    </div>
+                    <div class="box col-12 col-md-6 col-lg-3">
+                        <h4>Support</h4>
+                        <ul class="list-unstyled d-flex flex-column ">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">System Requirements</a></li>
+                            <li><a href="#">Register Activation Key</a></li>
+                            <li><a href="#">Site feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="box col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4>Company</h4>
+                            <ul class="list-unstyled d-flex flex-column ">
+                                <li><a href="#">Contact Support</a></li>
+                                <li><a href="#">Help Center</a></li>
+                            </ul>
+                        </div>
+                        <div class="media d-flex gap-1">
+                            <div
+                                class="icon-wrapper f-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div
+                                class="icon-wrapper t-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="bi bi-twitter"></i>
+                            </div>
+                            <div
+                                class="icon-wrapper p-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-pinterest-p"></i>
+
+                            </div>
+                            <div
+                                class="icon-wrapper i-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="foot row align-items-center">
+                    <div class="col-12 col-lg-2 d-flex justify-content-center justify-content-lg-start">
+                        <img src="../../../layout/images/logo.png" alt="logo-image">
+                    </div>
+                    <p class="col-12 col-lg-5 des text-white text-center text-lg-start">Copyright © 2026 Turitor. All
+                        Right Reserved.</p>
+                    <nav class="col-12 col-lg-5 d-flex flex-wrap justify-content-center gap-xl-2">
+                        <a href="#" class="des py-2 px-3">About</a>
+                        <a href="#" class="des py-2 px-3">Careers</a>
+                        <a href="#" class="des py-2 px-3">Resource center</a>
+                        <a href="#" class="des py-2 px-3">Guides</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--? WOW.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

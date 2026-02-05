@@ -42,7 +42,8 @@ h6 {
 p,
 span,
 a,
-i {
+i,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -259,6 +260,7 @@ a {
 }
 
 .card-title {
+  color: var(--primary);
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
