@@ -1,0 +1,60 @@
+#turitor {
+  padding-top: 90px;
+
+  .container {
+    .left-text {
+      padding-right: 100px;
+
+      @media (max-width: 991px) {
+        padding-right: 0;
+      }
+
+      h2 {
+        font-weight: 800;
+        line-height: clamp(46.8px, 5vw, 52px);
+      }
+
+      p {
+        margin-top: 30px;
+        padding-left: 20px;
+        border-left: 2px solid #ced9ee;
+      }
+    }
+
+    .right-cards {
+      > div {
+        gap: 15px;
+
+        @media (max-width: 767px) {
+          gap: 20px;
+        }
+      }
+
+      .box {
+        flex-shrink: 1;
+        background-color: rgb(240, 253, 250);
+        padding: 40px 40px 35px;
+        border: 2px solid rgb(178, 237, 219);
+        border-radius: 15px;
+        transition: border 0.4s ease;
+
+        &:hover {
+          border-color: rgb(240, 253, 250);
+        }
+
+        img {
+          margin-bottom: 20px;
+        }
+
+        h5 {
+          margin-bottom: 12px;
+          color: var(--accent);
+        }
+
+        p {
+          color: rgb(147, 216, 195);
+        }
+      }
+    }
+  }
+}

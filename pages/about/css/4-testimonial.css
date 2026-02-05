@@ -1,0 +1,9 @@
+#testimonial {
+  margin-top: 100px;
+  padding-block: 90px;
+  background-color: #f4f8ff;
+
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+}
