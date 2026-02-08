@@ -13,6 +13,10 @@ header {
     width: 38%;
     gap: 1rem;
 
+    @media (max-width: 1199px) {
+      justify-content: start !important;
+    }
+
     > img {
       width: 150px;
 
@@ -99,12 +103,12 @@ header {
             outline: none;
           }
 
-          @media (max-width: 1199px) {
-            width: clamp(70px, 13vw, 198px);
+          @media (max-width: 1400px) {
+            width: 120px;
           }
 
-          @media (max-width: 1075px) {
-            width: 60px;
+          @media (max-width: 1316px) {
+            width: 50px;
           }
         }
       }
@@ -114,6 +118,10 @@ header {
   .right {
     nav {
       gap: 38px;
+
+      @media (max-width: 1255px) {
+        gap: 20px;
+      }
 
       a {
         font-family: "Roboto", sans-serif;
@@ -158,6 +166,10 @@ header {
     }
 
     .icons {
+      @media (max-width: 1600px) {
+        display: none !important;
+      }
+
       i {
         color: white;
       }

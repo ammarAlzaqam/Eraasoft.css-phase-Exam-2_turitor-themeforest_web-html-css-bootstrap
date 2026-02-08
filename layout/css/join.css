@@ -82,12 +82,17 @@
             transition:
               background-color 0.4s ease,
               color 0.4s ease,
-              border 0.4s ease;
+              border 0.4s ease,
+              box-shadow 0.4s ease;
 
             &:hover {
               border-color: var(--accent);
               color: white;
               background-color: var(--accent);
+
+              @media (max-width: 575px) {
+                box-shadow: 3px 3px 10px 0px rgba(24, 24, 24, 0.5);
+              }
             }
           }
         }
