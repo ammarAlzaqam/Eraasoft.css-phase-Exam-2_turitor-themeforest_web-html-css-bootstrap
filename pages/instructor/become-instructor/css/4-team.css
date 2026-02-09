@@ -1,0 +1,19 @@
+#team {
+  padding-block: 70px;
+  .container-fluid {
+    > div {
+      flex-shrink: 1 !important;
+
+      img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      &:first-child {
+        img {
+          max-width: 340px;
+        }
+      }
+    }
+  }
+}

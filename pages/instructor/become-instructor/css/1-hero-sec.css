@@ -1,0 +1,40 @@
+#hero-sec {
+  padding-block: 100px;
+
+  .container {
+    .left {
+      @media (min-width: 992px) {
+        padding-right: 60px;
+      }
+
+      @media (max-width: 991px) {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        line-height: 52px;
+        margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+          line-height: 46px;
+        }
+      }
+
+      p {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
+
+        border-left: 2px solid var(--accent);
+      }
+    }
+
+    .right {
+      img {
+        flex-shrink: 1;
+        width: 100%;
+        max-width: 515px;
+      }
+    }
+  }
+}

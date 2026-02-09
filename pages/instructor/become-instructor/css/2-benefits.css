@@ -1,0 +1,42 @@
+#benefits {
+  background-color: #f7f9fb;
+  padding-block: 90px;
+
+  .container {
+    .row {
+      padding-top: 60px;
+
+      > div {
+        padding-inline: 15px;
+      }
+
+      .box {
+        margin-bottom: 30px;
+        gap: 20px;
+        border-color: #f9fbfc;
+        padding: 50px 50px 20px;
+        border: 1px solid #f5f5f5;
+        border-radius: 6px;
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.02);
+        transition:
+          border 0.4s ease,
+          background-color 0.4s ease,
+          box-shadow 0.4s ease;
+
+        &:hover {
+          border-color: #fff0;
+          background-color: white;
+          box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 991px) {
+          padding: 30px 20px 10px;
+        }
+
+        img {
+          margin-bottom: 13px;
+        }
+      }
+    }
+  }
+}
