@@ -1,0 +1,141 @@
+#blogs {
+  padding-block: 100px;
+
+  .container {
+    .row {
+      > div:first-child {
+        gap: 40px;
+      }
+    }
+    .box {
+      img {
+        width: 100%;
+      }
+      .content {
+        padding: 40px;
+        border: 1px solid rgb(238, 238, 238);
+        border-top: none;
+
+        @media (max-width: 767px) {
+          padding: 30px 20px;
+        }
+
+        a,
+        i {
+          color: var(--accent);
+        }
+
+        .details {
+          margin-bottom: 25px;
+          gap: 20px;
+
+          p {
+            color: #666666;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+          }
+        }
+
+        h2 {
+          a {
+            color: var(--primary);
+            transition: color 0.4s ease;
+          }
+
+          &:hover {
+            a {
+              color: var(--accent);
+            }
+          }
+        }
+
+        > p {
+          margin-block: 32px;
+        }
+      }
+    }
+
+    aside {
+      gap: 40px;
+
+      @media (max-width: 991px) {
+        margin-top: 40px;
+      }
+
+      .search-wrapper {
+        input {
+          padding-inline: 25px;
+          border: 1px solid rgb(206, 212, 218);
+          border-right: none;
+          background-color: none;
+
+          color: #495057;
+          font-size: 14px;
+          font-weight: 600;
+          font-style: italic;
+          line-height: 28px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .search-icon-wrapper {
+          cursor: pointer;
+          padding-inline: 20px;
+          background-color: var(--accent);
+
+          i {
+            color: white;
+            font-size: 16px;
+            line-height: 52px;
+          }
+        }
+      }
+
+      .box {
+        padding: 40px;
+        border: 1px solid rgb(238, 238, 238);
+
+        h4 {
+          position: relative;
+          padding-bottom: 15px;
+          margin-bottom: 30px;
+
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 26px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+          }
+        }
+
+        a {
+          color: #666666;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgb(238, 238, 238);
+          transition: color 0.4s ease;
+
+          &:last-child {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            border-bottom: 0;
+          }
+
+          &:hover {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+  }
+}
