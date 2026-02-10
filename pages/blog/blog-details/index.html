@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instructor profile</title>
+    <link rel="shortcut icon" href="../../../icon.png" type="image/png">
+
+    <!--? Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!--? Animate.css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--? Font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--? Css files -->
+    <link rel="stylesheet" href="../../../layout/css/index.css">
+    <link rel="stylesheet" href="./css/blogDetailsPage.css">
+</head>
+
+<body>
+    <!--TODO>> Header -->
+    <header class="container-fluid d-flex align-items-center">
+        <!--//* Left side -->
+        <div class="left d-flex align-items-center justify-content-between">
+            <!--//! Logo -->
+            <img src="../../../layout/images/logo.png">
+            <!--//! Inputs -->
+            <div class="inputs d-none d-lg-flex gap-3">
+                <!--! Dropdown Category btn -->
+                <button class="dropdown-btn d-flex align-items-center gap-2 px-3 px-xl-4 py-3 py-xl-2">
+                    <img src="../../../layout/images/header/dots.png">
+                    <span class="d-none d-xl-flex">Categories</span>
+                    <div class="dropdown-items bg-white rounded-2 shadow text-start">
+                        <a>Art & Design</a>
+                        <a>Architecture</a>
+                        <a>Business Study</a>
+                        <a>Computer Science</a>
+                        <a>Web Development</a>
+                        <a>Data Science</a>
+                        <a>Engineering</a>
+                    </div>
+                </button>
+                <!--! Search Input -->
+                <div class="search-input d-flex align-items-center gap-2">
+                    <img src="../../../layout/images/header/search-icon.png" alt="search-icon">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+        <!--//* Right side -->
+        <div class="right flex-grow-1 d-flex align-items-center justify-content-end justify-content-xxl-between gap-4">
+            <nav class="d-none d-lg-flex">
+                <a href="../../../index.html">Home</a>
+                <a href="../../about/index.html">About</a>
+                <a href="../../course/index.html">Course</a>
+                <a href="../../course/course-details/index.html">CDetails</a>
+                <a href="../../pricing/index.html">Pricing</a>
+                <a href="../../instructor/index.html">Instructor</a>
+                <a href="../../instructor/become-instructor/index.html">BecomeIns</a>
+                <a href="../../blog/index.html">Blog</a>
+                <a href="../../contact/index.html">Contact</a>
+            </nav>
+
+            <div class="icons d-none d-xxl-flex align-items-center gap-3">
+                <div class="user-icon-wrapper d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="cart-icon-wrapper d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <img src="../../../layout/images/header/menu-icon.png">
+            </div>
+            <!--! Menu Icon small screen-->
+            <div class="dropdown-menu-icon rounded d-block d-lg-none">
+                <img src="../../../layout/images/header/menu-icon.png">
+                <div class="dropdown-items">
+                    <div class="links-wrapper bg-white rounded-2 shadow text-start">
+                        <a href="../../../index.html">Home</a>
+                        <a href="../../about/index.html">About</a>
+                        <a href="../../course/index.html">Course</a>
+                        <a href="../../course/course-details/index.html">CourseDetails</a>
+                        <a href="../../pricing/index.html">Pricing</a>
+                        <a href="../../instructor/index.html">Instructor</a>
+                        <a href="../../instructor/become-instructor/index.html">BecomeInstructor</a>
+                        <a href="../../blog/index.html">Blog</a>
+                        <a href="../../contact/index.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <!--TODO>> 1-Hero Section -->
+        <section id="blogDetails-hero-sec">
+            <div class="container d-flex h-100 flex-column justify-content-center align-items-center gap-3">
+                <h2 class="title sub">Blog Details</h2>
+                <div class="d-flex gap-2">
+                    <p><a href="../../../index.html">Home</a></p>
+                    <p>/</p>
+                    <p><a href="../index.html">Blog</a></p>
+                    <p>/</p>
+                    <p>Blog Details</p>
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> 2-blog -->
+        <section id="blog">
+            <div class="container">
+                <div class="top">
+                    <img src="./images/blog1.jpg" alt="blog-image">
+                    <div class="details d-flex flex-wrap">
+                        <p class="d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-user"></i>
+                            <a href="#">turitor</a>
+                        </p>
+                        <p class="d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-clock"></i>
+                            November 25, 2019
+                        </p>
+                        <p class="d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <a href="#">Javascript</a>
+                        </p>
+                    </div>
+                    <p class="des">
+                        Creating software tailored to my games development gaming is a world entertainment phenomenon.
+                        The global games market is currently valued at $137.9 billion, by 2021 it’s expected to be worth
+                        $180 billion (Source, Newzoo). The programme is delivered through Coursera, the world’s largest
+                        online learning platform, providing an interactive and immersive learning experience.
+                    </p>
+                    <p class="des">
+                        Some countries have US-imposed restrictions on accessing content for this course. See ‘How you
+                        study’ to find out more. It’s no surprise JavaScript continues to be a top language, as it
+                        powers the web applications we use every day.
+                    </p>
+                    <blockquote>
+                        <i class="bi bi-quote"></i>
+                        <p>
+                            I’m thinking I’m back you want a war or you want to just give me a gun everything’s got a
+                            price rusty, I guess. You stabbed price rusty, the Devil in the back how good to see you
+                            again.
+                        </p>
+                        <cite>
+                            steve jobs
+                        </cite>
+                    </blockquote>
+                    <p class="des">
+                        See ‘How you study’ to find out more. It’s no surprise JavaScript continues to be a top
+                        language, as it powers the web applications we use every day. What’s impressive is the constant
+                        improvements to JavaScript that enable developers to continue to innovate and thrive in the web
+                        application world. All major front-end frameworks are written in JavaScript or a language that
+                        produces JavaScript to run. Usage of frameworks like Backbones.js are declining and being
+                        replaced by UI work done directly in Angular, React and Vue, while emerging tools.
+                    </p>
+                    <h3>
+                        Lopez has reportedly added to her real home in California
+                    </h3>
+                    <p class="des">
+                        Lo managed to make it hers for $28 million. As the Bronx native acquires a new home in
+                        California, she is trying to sell a gated compound in the Golden State. The 17,000 square-foot
+                        Hidden Hills property with mountain views boasts nine bedrooms, including a master suite with
+                        private terrace and an entertainment wing, which includes a 20-seat theater, dance studio and
+                        recording studio. China’s youngest female billionaire has unloaded her triplex penthouse in
+                        Sydney.
+                    </p>
+                    <p class="des">
+                        The 17,000 square-foot Hidden Hills property with mountain views boasts nine bedrooms, includin.
+                        master suite with private terrace and an entertainment wing .
+                    </p>
+                    <p class="des">
+                        Following years of white-hot growth, luxury home prices in Sydney declined for the first time in
+                        years, slipping 1% between the second quarter and third quarter of 2018, according to the latest
+                        report from brokerage Knight Frank.The nearly 6,500-square-foot apartment has sweeping views.
+                    </p>
+                </div>
+                <div class="lower">
+                    <figure>
+                        <img src="./images/blog2.jpg" alt="blog-img">
+                        <figcaption>That’s why Attentive was born in 2022 help sales teams make their</figcaption>
+                    </figure>
+                    <h3>
+                        The property, complete with a 30-seat screening room, a 100-seat amp hitheater and a swimming
+                        pond with sandy beach
+                    </h3>
+                    <p class="des">
+                        She is trying to sell a gated compound in the Golden State. The 17,000-square-foot Hidden Hills
+                        property with mountain and city views boasts nine bedrooms, including a master suite with
+                        private terrace and an entertainment wing, which includes a 20-seat theater
+                    </p>
+                    <h3 class="card-title">
+                        Turitor Teaching JavaScript or a language that produces JavaScript to run.
+                    </h3>
+                    <ul>
+                        <li class="des">
+                            Struggling to sell one multi-million dollar home currently on the market
+                        </li>
+                        <li class="des">
+                            Lopez has reportedly added to her real estate holdings an eight-plus acre
+                        </li>
+                        <li class="des">
+                            The property, complete with a 30-seat screening room, a 100-seat amphit
+                        </li>
+                        <li class="des">
+                            Lo managed to make it hers for $28 million. As the Bronx native acquires
+                        </li>
+                    </ul>
+                    <p class="des">
+                        The 17,000-square-foot Hidden Hills property with mountain and city views boasts nine bedrooms,
+                        including a master suite with private terrace and an entertainment wing, which includes a
+                        20-seat theater.Black farmers in the US’s South—faced with continued failure in their efforts to
+                        run successful farms their launched a lawsuit claiming that “white racism”
+                    </p>
+                    <nav class="flex flex-column gap-1">
+                        <h4><a href="#">Python may be you completed online</a></h4>
+                        <a href="#" class="des d-flex align-items-center gap-1">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                            Previous post
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> 3-Join -->
+        <section id="join">
+            <div class="container">
+                <div
+                    class="content d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                    <p>#Newsletter</p>
+                    <div class="subscribe-box d-flex flex-column align-items-center flex-lg-row">
+                        <h2 class="col-12 col-lg-6">Join our community of students</h2>
+                        <div
+                            class="send-message-input-wrapper col-12 col-lg-6 d-flex flex-column flex-sm-row align-items-center">
+                            <input class="flex-grow-1" type="text" placeholder="Enter your email">
+                            <button class="btn">
+                                <i class="fa-solid fa-envelope"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--TODO>> Footer -->
+        <footer>
+            <div class="container d-flex flex-column gap-4 gap-md-5">
+                <div class="row g-4">
+                    <div class="box col-12 col-md-6 col-lg-3">
+                        <h4>Company</h4>
+                        <ul class="list-unstyled d-flex flex-column ">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Resource center</a></li>
+                            <li><a href="#">Guides</a></li>
+                        </ul>
+                    </div>
+                    <div class="box col-12 col-md-6 col-lg-3">
+                        <h4>Categories</h4>
+                        <ul class="list-unstyled d-flex flex-column ">
+                            <li><a href="#">All Courses</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Design & Branding</a></li>
+                            <li><a href="#">Storytelling & Voice Over</a></li>
+                        </ul>
+                    </div>
+                    <div class="box col-12 col-md-6 col-lg-3">
+                        <h4>Support</h4>
+                        <ul class="list-unstyled d-flex flex-column ">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">System Requirements</a></li>
+                            <li><a href="#">Register Activation Key</a></li>
+                            <li><a href="#">Site feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="box col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4>Company</h4>
+                            <ul class="list-unstyled d-flex flex-column ">
+                                <li><a href="#">Contact Support</a></li>
+                                <li><a href="#">Help Center</a></li>
+                            </ul>
+                        </div>
+                        <div class="media d-flex gap-1">
+                            <div
+                                class="icon-wrapper f-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div
+                                class="icon-wrapper t-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="bi bi-twitter"></i>
+                            </div>
+                            <div
+                                class="icon-wrapper p-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-pinterest-p"></i>
+
+                            </div>
+                            <div
+                                class="icon-wrapper i-icon rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="foot row align-items-center">
+                    <div class="col-12 col-lg-2 d-flex justify-content-center justify-content-lg-start">
+                        <img src="../../../layout/images/logo.png" alt="logo-image">
+                    </div>
+                    <p class="col-12 col-lg-5 des text-white text-center text-lg-start">Copyright © 2026 Turitor. All
+                        Right Reserved.</p>
+                    <nav class="col-12 col-lg-5 d-flex flex-wrap justify-content-center gap-xl-2">
+                        <a href="#" class="des py-2 px-3">About</a>
+                        <a href="#" class="des py-2 px-3">Careers</a>
+                        <a href="#" class="des py-2 px-3">Resource center</a>
+                        <a href="#" class="des py-2 px-3">Guides</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--? WOW.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

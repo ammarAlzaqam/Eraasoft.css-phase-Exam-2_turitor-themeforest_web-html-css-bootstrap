@@ -1,0 +1,139 @@
+#blog {
+  padding-block: 100px 50px;
+
+  .container {
+    padding-inline: 110px;
+
+    @media (max-width: 767px) {
+      padding-inline: 15px;
+    }
+
+    p.des,
+    h3 {
+      margin-block: 2rem;
+    }
+
+    h3:not(.card-title) {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    .top {
+      img {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
+      .details {
+        gap: 20px;
+
+        a,
+        i {
+          color: var(--accent);
+        }
+      }
+
+      blockquote {
+        background-color: #f9f9f9;
+        margin-block: 30px;
+        padding: 30px 30px 30px 40px;
+
+        @media (max-width: 767px) {
+          padding: 20px;
+        }
+
+        * {
+          font-style: italic;
+        }
+
+        i {
+          display: block;
+          margin-left: -5px;
+          font-size: 2.5rem;
+          color: #dedede;
+          line-height: 0rem;
+
+          transform: skewX(-10deg);
+        }
+
+        p {
+          margin-top: -5px;
+          margin-bottom: 20px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+        }
+
+        cite {
+          position: relative;
+          padding-left: 40px;
+
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 26px;
+          text-transform: capitalize;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+
+            width: 30px;
+            height: 1px;
+            background-color: #6c757d;
+          }
+        }
+      }
+    }
+
+    .lower {
+      figure {
+        margin-bottom: 3rem;
+
+        img {
+          width: 100%;
+          margin-block: 10px;
+        }
+
+        figcaption {
+          padding: 14px;
+          text-align: center;
+
+          font-size: 14px;
+          line-height: 22.4px;
+        }
+      }
+
+      ul {
+        margin-block: 2rem;
+        padding-left: 40px;
+      }
+
+      nav {
+        border: 1px solid #eeeeee;
+        margin-block: 35px;
+        padding: 25px;
+
+        a {
+          transition: color 0.4s ease;
+          &:hover {
+            color: var(--accent);
+          }
+        }
+
+        h4 {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 30px;
+        }
+
+        > a {
+          color: #666666;
+        }
+      }
+    }
+  }
+}
