@@ -1,0 +1,54 @@
+#contact {
+  padding-top: 100px;
+
+  .container {
+    .row {
+      padding-top: 60px;
+
+      > div {
+        @media (max-width: 991px) {
+          margin-bottom: 30px;
+        }
+
+        &:last-child {
+          @media (max-width: 991px) {
+            margin-bottom: 0px;
+          }
+        }
+      }
+
+      .box {
+        height: 100%;
+        gap: 27px;
+        padding: 35px 30px;
+        border: 1px dashed rgb(232, 232, 232);
+        border-radius: 15px;
+        box-shadow: 0 15px 45px 0 rgb(51 51 51 / 0.08);
+
+        .icon-wrapper {
+          width: 55px;
+          height: 55px;
+          border: 5px solid rgb(235, 241, 247);
+          i {
+            font-size: 20px;
+            color: var(--bg);
+          }
+        }
+
+        .content {
+          p {
+            font-size: 17px;
+            line-height: 26px;
+            text-transform: capitalize;
+          }
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
