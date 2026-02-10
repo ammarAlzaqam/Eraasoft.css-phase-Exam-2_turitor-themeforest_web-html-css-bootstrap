@@ -18,6 +18,8 @@
   --shadow: 0 30px 30px 5px #7979791a;
 
   --font-lato: "Lato", sans-serif;
+
+  --animate-duration: 2s;
 }
 
 * {
@@ -74,7 +76,7 @@ ul {
 
 body {
   background-color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 section {
@@ -87,8 +89,6 @@ a {
 }
 
 .main {
-  height: calc(100dvh - 90px);
-  overflow: auto;
 }
 
 .container {
